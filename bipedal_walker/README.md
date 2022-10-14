@@ -22,12 +22,13 @@ So the steps to perform are:
   cp learnerreplaymem_sac.model hinterreplaymem_sac.model
   ```
 
-  * Now you can use hints, to solver for example the ```BipedalWalkerHardcore-v3``` environment
+  * Now you can use hints, for example to solve the ```BipedalWalkerHardcore-v3``` environment
 
   ```
   python main.py --seed 4 --env_name BipedalWalkerHardcore-v3 --iteration 3500 --use_hint
   ```
 
+You can change the random seeds as you like.
 
 Files provided are:
 
