@@ -1,4 +1,4 @@
-#Bipedal walker using SAC with hints
+# Bipedal walker using SAC with hints
 
 This is the directory containing the code for SAC agent training with or without hints. The hints are provided by another agent, which is initialized by a saved model. This saved model is first created by running SAC, without hints, to solve the ```BipedalWalker-v3``` environment.
 
