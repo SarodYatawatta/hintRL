@@ -1,4 +1,5 @@
 #Bipedal walker using SAC with hints
+
 This is the directory containing the code for SAC agent training with or without hints. The hints are provided by another agent, which is initialized by a saved model. This saved model is first created by running SAC, without hints, to solve the ```BipedalWalker-v3``` environment.
 
 So the steps to perform are:
@@ -13,8 +14,11 @@ So the steps to perform are:
 
   ```
   cp learnerq_eval_1_sac_critic.model hinterq_eval_1_sac_critic.model
+
   cp learnerq_eval_2_sac_critic.model hinterq_eval_2_sac_critic.model
+
   cp learnera_eval_sac_actor.model hintera_eval_sac_actor.model
+
   cp learnerreplaymem_sac.model hinterreplaymem_sac.model
   ```
 
@@ -28,6 +32,9 @@ So the steps to perform are:
 Files provided are:
 
 ```main.py``` : main method
+
 ```net_sac.py``` : networks, SAC agent, learning using ADMM
+
 ```PER.py``` : prioritized experience replay memory (not used)
+
 ```display.py``` : disply the agent in action
