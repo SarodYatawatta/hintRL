@@ -18,6 +18,8 @@ alpha=0.036
 start_steps=10000
 reward_scale = 5
 
+# set this to true for new version of GYM
+NEW_GYM=False
 
 parser = argparse.ArgumentParser()
 
@@ -62,7 +64,10 @@ def main():
         ep_r = 0
         ep_s = 0
         done = False
-        state = env.reset()
+        if NEW_GYM:
+          state, info = env.reset()
+        else:
+          state = env.reset()
         while not done:
             action = []
             if total_steps < start_steps and not args.load:
@@ -70,7 +75,11 @@ def main():
             else:
                 action = agent.choose_action(state)
 
-            next_state, reward, done, info = env.step(action)
+            if NEW_GYM:
+              next_state, reward, terminated, truncated, info = env.step(action)
+              done = terminated or truncated
+            else:
+              next_state, reward, done, info = env.step(action)
 
             scaled_reward = reward * reward_scale if reward>0 else reward
             scores.append(reward)
