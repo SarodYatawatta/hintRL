@@ -32,7 +32,7 @@ You can change the random seeds as you like.
 
 Files provided are:
 
-```main.py``` : main method
+```main.py``` : main method, use ```NEW_GYM=True``` with new gym 0.26.2
 
 ```net_sac.py``` : networks, SAC agent, learning using ADMM
 
