@@ -1,5 +1,5 @@
 # hintRL
-Reinforcement learning assisted by hints, code to accompany the preprint [Hint assisted reinforcement learning: an application in radio astronomy](https://arxiv.org/submit/4685231/preview).
+Reinforcement learning assisted by hints, code to accompany the preprint [Hint assisted reinforcement learning: an application in radio astronomy](https://arxiv.org/abs/2301.03933).
 
 ## Bipedal Walker
 See the files in <a href="./bipedal_walker">this directory</a>.
