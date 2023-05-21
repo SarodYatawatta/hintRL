@@ -19,7 +19,7 @@ start_steps=10000
 reward_scale = 5
 
 # set this to true for new version of GYM
-NEW_GYM=False
+NEW_GYM=True
 
 parser = argparse.ArgumentParser()
 
