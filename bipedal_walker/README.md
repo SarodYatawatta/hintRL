@@ -2,7 +2,9 @@
 
 This is the directory containing the code for SAC agent training with or without hints. The hints are provided by another agent, which is initialized by a saved model. This saved model is first created by running SAC, without hints, to solve the ```BipedalWalker-v3``` environment.
 
-So the steps to perform are:
+<img src="./movie.gif" alt="trained BipedalWalkerHardcore" width=400>
+
+The steps to perform are:
 
   * Train an agent for ```BipedalWalker-v3``` as
 
