@@ -6,7 +6,7 @@ import os, random
 import numpy as np
 
 import torch
-import gym
+import gymnasium as gym
 from net_sac import Agent
 
 gamma=0.99
@@ -17,9 +17,6 @@ tau=0.005
 alpha=0.036
 start_steps=10000
 reward_scale = 5
-
-# set this to true for new version of GYM
-NEW_GYM=True
 
 parser = argparse.ArgumentParser()
 
@@ -59,10 +56,7 @@ def main():
         ep_r = 0
         ep_s = 0
         done = False
-        if NEW_GYM:
-          state, info = env.reset()
-        else:
-          state = env.reset()
+        state, info = env.reset()
         while not done:
             action = []
             if total_steps < start_steps and not args.load:
@@ -70,11 +64,8 @@ def main():
             else:
                 action = agent.choose_action(state)
 
-            if NEW_GYM:
-              next_state, reward, terminated, truncated, info = env.step(action)
-              done = terminated or truncated
-            else:
-              next_state, reward, done, info = env.step(action)
+            next_state, reward, terminated, truncated, info = env.step(action)
+            done = terminated or truncated
 
             ep_r += reward
             ep_s += 1
