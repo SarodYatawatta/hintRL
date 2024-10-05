@@ -34,9 +34,13 @@ You can change the random seeds as you like.
 
 Files provided are:
 
-```main.py``` : main method, use ```NEW_GYM=True``` with new gym 0.26.2
+```main.py``` : main method for SAC
+
+```main_td3.py``` : main method for TD3
 
 ```net_sac.py``` : networks, SAC agent, learning using ADMM
+
+```net_td3.py``` : networks, TD3 agent, learning using ADMM
 
 ```PER.py``` : prioritized experience replay memory (not used)
 
