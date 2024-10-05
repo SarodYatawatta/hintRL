@@ -6,7 +6,7 @@ import os, random
 import numpy as np
 
 import torch
-import gym
+import gymnasium as gym
 from net_sac import Agent
 
 gamma=0.99

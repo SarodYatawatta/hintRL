@@ -6,7 +6,7 @@ import os, random
 import numpy as np
 
 import torch
-import gym
+import gymnasium as gym
 #from net_ddpg import AgentDDPG
 from net_td3 import AgentTD3
 
